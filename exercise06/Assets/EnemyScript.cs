@@ -25,7 +25,7 @@ public class EnemyScript : MonoBehaviour
         {
             newPositionTimer = Random.Range(1, 15);
             // Compute a random position and assign it to the NavMeshAgent.
-            Vector3 randomPosition = RandomNavmeshLocation(Random.Range(5, 10));
+            Vector3 randomPosition = RandomNavmeshLocation(Random.Range(40, 210));
             nma.SetDestination(randomPosition);
         }
     }
