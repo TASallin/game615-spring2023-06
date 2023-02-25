@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public TMP_Text playerDisplay;
     public TMP_Text gachaDisplay;
     public GameObject edelgard;
+    public GameObject kaga;
 
     // Start is called before the first frame update
     void Start()
@@ -61,6 +62,9 @@ public class GameManager : MonoBehaviour
     public void PlayerPoint() {
         playerScore += 1;
         playerDisplay.text = "" + playerScore + " rings collected";
+        if (playerScore == 15) {
+            kaga.SetActive(true);
+        }
     }
 
     public void GachaPoint() {
