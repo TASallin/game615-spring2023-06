@@ -25,7 +25,7 @@ public class EnemyScript : MonoBehaviour
         {
             newPositionTimer = Random.Range(1, 15);
             // Compute a random position and assign it to the NavMeshAgent.
-            Vector3 randomPosition = RandomNavmeshLocation(Random.Range(40, 210));
+            Vector3 randomPosition = RandomNavmeshLocation(250);
             nma.SetDestination(randomPosition);
         }
     }
@@ -35,8 +35,9 @@ public class EnemyScript : MonoBehaviour
     // random positions on a NavMesh.
     public Vector3 RandomNavmeshLocation(float radius)
     {
-        Vector3 randomDirection = Random.insideUnitSphere * radius;
-        randomDirection += transform.position;
+        //Vector3 randomDirection = Random.insideUnitSphere * radius;
+        //randomDirection += transform.position;
+        Vector3 randomDirection = new Vector3(Random.Range(0, radius), transform.position.y, Random.Range(0, radius));
         NavMeshHit hit;
         Vector3 finalPosition = Vector3.zero;
         if (NavMesh.SamplePosition(randomDirection, out hit, radius, 1))

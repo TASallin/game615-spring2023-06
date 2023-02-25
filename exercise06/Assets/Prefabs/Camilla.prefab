@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 5052322123523278515}
   - component: {fileID: 5052322123523278512}
   - component: {fileID: 5052322123523278508}
+  - component: {fileID: 5840145235716525925}
   - component: {fileID: 5052322123523278511}
   m_Layer: 0
   m_Name: CamillaCapsule
@@ -126,7 +127,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5052322123523278513}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
@@ -144,6 +145,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d3390d2326ff4e4aa32866e8c471cab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5840145235716525925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5052322123523278513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 608370016d54f674facf9823fec6a86e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isEnemy: 1
+  gm: {fileID: 0}
 --- !u!195 &5052322123523278511
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -154,7 +169,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5000002
-  m_Speed: 30
+  m_Speed: 15
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
